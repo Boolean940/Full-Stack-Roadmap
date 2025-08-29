@@ -35,7 +35,7 @@ body.dark{
   font-family: 'Cairo', sans-serif;
   font-weight: 900;
   color: #000000;
-  background:   url('/dark.png') ;
+  background:   url('dark.png') ;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -361,4 +361,5 @@ body[dir="rtl"] .settings-dropdown {
     transition: all .3s;
 
  }
+
 
