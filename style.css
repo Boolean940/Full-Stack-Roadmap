@@ -1,0 +1,363 @@
+*{
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    cursor: default;
+    transition: all 0.5s;
+}
+
+::selection{
+  background: transparent;
+}
+
+.title{
+text-align: center;
+margin-bottom: 100px;
+color: #408691;
+font-size: 50px;
+}
+
+
+body.light{
+  margin: 0;
+  padding: 25px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 900;
+  color: #1b4332;
+  background:   url('/Home/img/background-test.png') ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.dark{
+  margin: 0;
+  padding: 25px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 900;
+  color: #000000;
+  background:   url('/Home/img/dark.png') ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+  .timeline-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .card {
+    background: #ffffffcd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(34, 139, 135, 0.15);
+    width: 60%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+    border-left: 6px solid #2d526a;
+    cursor: pointer;
+    transition: all .1s;
+  }
+  
+  .card.left {
+    align-self: flex-start;
+  }
+  
+  .card.right {
+    align-self: flex-end;
+  }
+  
+  body.light .card i {
+    font-size: 34px;
+    color: #2d676a;
+    margin-bottom: 12px;
+  }
+  
+    
+  body.dark .card i {
+    font-size: 34px;
+    color: #464646;
+    margin-bottom: 12px;
+  }
+
+
+  body.light .card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #214b6b;
+  }
+
+  body.dark .card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #3f3f3f;
+  }
+  
+  body.dark .card p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #000000;
+  }
+  
+  body.light .card p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #344e4e;
+  }
+  
+  .card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card.reveal:hover{
+    transform: scale(1.04);
+    transform: translate(15px,15px);
+    box-shadow: -50px -20px  20px;
+    opacity: .7;
+  }
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+      align-self: center !important;
+      text-align: left;
+    }
+  }
+  
+  
+  body.light::-webkit-scrollbar {
+    width: 10px;
+  }
+  body.light::-webkit-scrollbar-track {
+    background: #d8f3dc;
+    border-radius: 10px;
+  }
+  body.light::-webkit-scrollbar-thumb {
+    background: #40918a;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  body.light::-webkit-scrollbar-thumb:hover {
+    background: #2d6a6a;
+  }
+
+
+
+
+
+
+  body.dark::-webkit-scrollbar {
+    width: 10px;
+  }
+  body.dark::-webkit-scrollbar-track {
+    background: #d8f3dc;
+    border-radius: 10px;
+  }
+  body.dark::-webkit-scrollbar-thumb {
+    background: #646464;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  body.dark::-webkit-scrollbar-thumb:hover {
+    background: #4c5050;
+  }
+
+  /* Playlist Section */
+  #playlist-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+
+  iframe{
+    border-radius: 5px;
+  }
+
+  .video-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 24px;
+   margin-top: 20px;
+   width: 99%;
+   height: fit-content;
+}
+
+.video-item {
+    opacity: 0;
+    background-color: #fbfbfbbb;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .video-item.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+.video-item h4 {
+  color: #2d6a4f;
+  font-size: 32px;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+    width: 85%;
+  }
+  .card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  h2{
+    margin-bottom: 90px;
+    font-size: 42px;
+
+  }
+
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+      height: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      height: 300px;
+    }
+  }
+  
+  @keyframes fadeSlideOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+      height: 300px;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+      height: 0;
+    }
+  }
+  
+  .card iframe {
+    animation: fadeSlideIn 0.4s ease forwards;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  .card iframe.closing {
+    animation: fadeSlideOut 0.3s ease forwards;
+  }
+  
+
+body[dir="rtl"] .settings-menu {
+  left: 15px;
+  right: auto;
+}
+
+body[dir="rtl"] .settings-dropdown {
+  left: 8px;
+  right: auto;
+}
+
+  .settings-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .settings-btn {
+    background: #fff;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .settings-btn:hover {
+    background: #f5f5f5;
+    transform: rotate(90deg);
+  }
+  
+  .settings-dropdown {
+    position: absolute;
+    top: 69px;
+    right: 0;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    min-width: 160px;
+  }
+  
+  .settings-menu:hover .settings-dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .settings-dropdown button {
+    background: none;
+    border: none;
+    text-align: right;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .settings-dropdown button i {
+    font-size: 25px;
+  }
+  
+  .settings-dropdown button:hover {
+    background-color: #d2d2d2;
+  }
+  
+
+
+  .hide{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all .3s;
+ }
+
+ .show{
+    display: flex;
+    opacity: 1;
+    transition: all .3s;
+
+ }

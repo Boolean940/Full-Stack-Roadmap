@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Stack Roadmap</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="/Home/img/logo.png" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Font: Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light">
+  <div class="settings-menu">
+    <button class="settings-btn">
+      <i class="fas fa-cog"></i>
+    </button>
+    <div class="settings-dropdown">
+
+      <button onclick="gohome()">
+        <i class="fas fa-home"></i>
+        Home
+      </button>
+
+      <button onclick="toggleTranslation()">
+        <i class="fas fa-language"></i>  
+        Arabic
+      </button>
+
+      <button class="darkbtn show">
+        <i class="fas fa-moon"></i>  
+        Dark
+      </button>
+
+      <button class="lightbtn hide">
+        <i class="fas fa-sun"></i>  
+        Light
+      </button>
+ 
+    </div>
+  </div>
+
+  <div class="title">
+   <span style="border-bottom: solid rgb(82, 101, 110) 2px;">Fullstack</span><br> <span style="font-size: 65px;">Roadmap</span>
+  </div>
+  <div class="timeline-container" id="rd">
+    <div class="card right reveal" onclick="showPlaylist('tut')" data-topic="tut">
+      <i class="fas fa-video"></i>
+      <h3>Tutorial</h3>
+      <p>What will we do ?</p>
+    </div>
+    <div class="card left reveal" onclick="showPlaylist('html')">
+      <i class="fab fa-html5"></i>
+      <h3>HTML</h3>
+      <p>Structure your website using semantic tags and clean layout elements.</p>
+    </div>
+    
+    <div class="card right reveal" onclick="showPlaylist('css')">
+      <i class="fab fa-css3-alt"></i>
+      <h3>CSS</h3>
+      <p>Style your site with colors, fonts, layout tools like Flexbox and Grid.</p>
+    </div>
+    
+    <div class="card left reveal" onclick="showPlaylist('js')">
+      <i class="fab fa-js"></i>
+      <h3>JavaScript</h3>
+      <p>Add interactivity using events, DOM manipulation, and core logic.</p>
+    </div>
+    
+    <div class="card right reveal" onclick="showPlaylist('react')">
+      <i class="fab fa-react"></i>
+      <h3>React</h3>
+      <p>Build component-based UIs using React, JSX, state, and routing.</p>
+    </div>
+    
+    <div class="card left reveal" onclick="showPlaylist('angular')">
+      <i class="fab fa-angular"></i>
+      <h3>Angular</h3>
+      <p>Develop dynamic web apps using TypeScript, services, and RxJS.</p>
+    </div>
+    
+    <div class="card right reveal" onclick="showPlaylist('py')">
+      <i class="fab fa-python"></i>
+      <h3>Python</h3>
+      <p>Learn programming fundamentals, OOP, data structures, and automation.</p>
+    </div>
+    
+    <div class="card left reveal" onclick="showPlaylist('node')">
+      <i class="fab fa-node-js"></i>
+      <h3>Node.js</h3>
+      <p>JavaScript runtime for building scalable back-end services.</p>
+    </div>
+    
+    <div class="card right reveal" onclick="showPlaylist('express')">
+      <i class="fas fa-server"></i>
+      <h3>Express.js</h3>
+      <p>Web framework for Node.js to handle routes, middleware, and APIs.</p>
+    </div>
+    
+    <div class="card left reveal" onclick="showPlaylist('mongodb')">
+      <i class="fas fa-database"></i>
+      <h3>MongoDB</h3>
+      <p>NoSQL database using collections and documents for flexible storage.</p>
+    </div>
+    
+    <div class="card right reveal" onclick="showPlaylist('mysql')">
+      <i class="fas fa-database"></i>
+      <h3>MySQL</h3>
+      <p>Relational database system using tables and structured schemas.</p>
+    </div>
+    
+    <div class="card left reveal" onclick="showPlaylist('git')">
+      <i class="fab fa-git-alt"></i>
+      <h3>Git & GitHub</h3>
+      <p>Track code changes, collaborate, and manage projects efficiently.</p>
+    </div>
+    
+    <div class="card right reveal" onclick="showPlaylist('docker')">
+      <i class="fab fa-docker"></i>
+      <h3>Docker</h3>
+      <p>Package applications into containers for consistent deployment.</p>
+    </div>
+    
+    <div class="card left reveal" onclick="showPlaylist('rest')">
+      <i class="fas fa-plug"></i>
+      <h3>REST APIs</h3>
+      <p>Create and consume APIs to connect front-end and back-end logic.</p>
+    </div>
+    
+    <div class="card right reveal" onclick="showPlaylist('auth')">
+      <i class="fas fa-user-shield"></i>
+      <h3>Authentication</h3>
+      <p>Implement secure user login with JWT, sessions, or OAuth.</p>
+    </div>
+  </div>
+  <!-- Playlist Section -->
+  <div id="playlist-container" style="display: none;">
+    <div id="playlist-content">
+
+    </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
